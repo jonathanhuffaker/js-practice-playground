@@ -86,4 +86,31 @@ function deleteNth(arr,x){
     
     return result;
 }
+// =======================
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+Below was not my solution but on of the clever solutions from someone else which is much 
+
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin);
+}
+
+
+// another option 
+
+function validatePIN (pin) {
+  
+  var pinlength = pin.length;
+  var isFourOrSix = (pinlength == 4 || pinlength == 6);
+  var numbersOnly = pin.match(/^\d+$/);
+    
+  if(isFourOrSix && numbersOnly){
+    return true;
+  }
+  
+  return false;
+
+}
 
