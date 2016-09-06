@@ -87,11 +87,11 @@ function deleteNth(arr,x){
     return result;
 }
 // =======================
-// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+// 4.  ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
 // If the function is passed a valid PIN string, return true, else return false.
 
-Below was not my solution but on of the clever solutions from someone else which is much 
+Below was not my solution but on of the clever solutions from someone else that solved
 
 function validatePIN(pin) {
   return /^(\d{4}|\d{6})$/.test(pin);
@@ -114,3 +114,18 @@ function validatePIN (pin) {
 
 }
 
+// ============================
+// #5
+// In this kata you will create a function that takes a list of non-negative integers and strings 
+// and returns a new list with the strings filtered out.
+
+
+
+function filter_list(l) {
+  // Return a new array with the strings filtered out
+  return l.filter(function(x) {
+    return typeof x === 'number';
+  });
+}
+
+// ============
