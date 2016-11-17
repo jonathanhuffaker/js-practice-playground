@@ -153,4 +153,12 @@ function getAverageAge(arr) {
     totalAge += arr[i].age;
   }
   return Math.round(totalAge/arr.length);
+
+}
+
+
+// another way to solve 
+
+function getAverageAge(list) {
+  return Math.round(list.reduce((sum,obj) => sum + obj.age, 0) / list.length);
 }
