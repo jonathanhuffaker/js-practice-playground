@@ -161,4 +161,23 @@ function getAverageAge(arr) {
 
 function getAverageAge(list) {
   return Math.round(list.reduce((sum,obj) => sum + obj.age, 0) / list.length);
+
 }
+
+  // ======================
+
+   // add up all the whole numbers from 1 through a given number n.
+   // verify that n is a valid positive integer number. If not, please, return false
+
+function f(n){
+  if (Number.isInteger(n) && n > 0) {
+    var output = 0;
+    for (var i = 0; i <= n; i = i + 1) {
+      output += i;
+    }
+    return output;
+  } else { 
+    return false;
+  }
+};
+// ==============
