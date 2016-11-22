@@ -187,3 +187,28 @@ function minMax(arr){
   arr.sort(function(a,b) {return a - b});
   return [arr[0], arr[arr.length - 1]]; // fix me!
 }
+
+
+// ==================
+// You are going to be given a word. Your job is to return the middle character of the word. 
+// If the word's length is odd, return the middle character. If the word's length is even, 
+// return the middle 2 characters.
+
+function getMiddle(s)
+{
+  var midOfS = 0;
+  var midOfSOdd = 0;
+  var evenOrOdd = s.length;
+  if (evenOrOdd % 2 == 0) {
+    midOfS = evenOrOdd / 2 - 1;
+    var mySlice = s.slice(midOfS, (midOfS +2));
+    return mySlice;
+  }
+  else {
+    midOfSOdd = evenOrOdd/2;
+    var mySliceOdd = s.slice(midOfSOdd, (midOfSOdd +1));
+
+    return mySliceOdd;
+  }
+  
+}
