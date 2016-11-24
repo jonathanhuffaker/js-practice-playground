@@ -257,4 +257,46 @@ var max = function(list){
     return list[0];
 }
 
+// Complete the function so that it finds the mean of the three scores 
+// passed to it and returns the letter value associated with that grade.
+
+function getGrade (s1, s2, s3) {
+  // Code here
+  var gradeAverage = (s1+s2+s3) / 3;
+  
+  if(gradeAverage >= 90 && gradeAverage <=100){
+    return 'A';
+  
+  } else if(gradeAverage >= 80 && gradeAverage <90){
+    return 'B';
+  } else if(gradeAverage >= 70 && gradeAverage <80){
+    return 'C';
+  } else if(gradeAverage >= 60 && gradeAverage <70){
+    return 'D';
+  } else if(gradeAverage >=0 && gradeAverage < 60){
+    return "F";
+  }
+};
+
+// ===========================
+// Build Tower by the following given argument:
+// number of floors (integer and always greater than 0).
+
+// Tower block is represented as *
+
+function towerBuilder(nFloors) {
+  // build here
+  let tower = [];
+  let repeated;
+  let spaces;
+  let row;
+  for (let x = nFloors; x > 0; x--) {
+    repeated = '*'.repeat(x*2 - 1);
+    spaces = ' '.repeat(nFloors - x);
+    row = spaces.concat(repeated,spaces);
+    tower.unshift(row)
+  }
+  return tower;
+}
+
 
