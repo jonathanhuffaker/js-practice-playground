@@ -315,3 +315,29 @@ function findShort(s){
   return smallest.length;
 }
 
+// ========================
+
+// Linked Lists - Length & Count
+
+// Implement Length() to count the number of nodes in a linked list.
+// Implement Count() to count the occurrences of an integer in a linked list.
+// I've decided to bundle these two functions within the same Kata 
+// since they are both very similar.
+
+// The push() and buildOneTwoThree() functions do not need to be redefined.
+
+function Node(data) {
+  this.data = data
+  this.next = null
+}
+
+function length(head) {
+  return head ? 1 + length(head.next) : 0
+}
+
+function count(head, data) {
+  if (!head) return 0
+  return (head.data === data ? 1 : 0) + count(head.next, data)
+}
+
+
