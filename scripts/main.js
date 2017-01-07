@@ -391,3 +391,27 @@ function mxdiflg(a1, a2) {
   return Math.max(Math.max(...l1) - Math.min(...l2), Math.max(...l2) - Math.min(...l1))
 }
 
+// =============================
+
+// Mr. Scrooge has a sum of money 'P' that wants to invest, 
+// and he wants to know how many years 'Y' this sum has to be kept in the bank in order for this sum of money to amount to 'D'.
+// The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly, 
+// and the new sum is re-invested yearly after paying tax 'T'
+// Note that the principal is not taxed but only the year's accrued interest
+
+function calculateYears(principal, interest, tax, desired) {
+    // your code
+
+    
+    for (var y=0; ; y++) {
+      if(principal >= desired){
+       return y;        
+      } else
+      {
+        var yearInterest = principal * interest; 
+        var yearTax  = yearInterest * tax; 
+        principal = principal + (yearInterest - yearTax);
+        
+      }
+    }
+}
