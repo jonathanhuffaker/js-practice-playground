@@ -415,3 +415,26 @@ function calculateYears(principal, interest, tax, desired) {
       }
     }
 }
+// =====================
+// Implement the method isSortedAndHow, which accepts an array of integers, and returns one of the following:
+// 'yes, ascending' - if the numbers in the array are sorted in an ascending way
+// 'yes, descending' - if the numbers in the array are sorted in a descending way
+// 'no'
+function isSortedAndHow(array) {
+
+     var arr1 = [];
+     arr1 = arr1.concat(array);
+     arr1.sort(function(a,b){return b-a});
+     arr1 = arr1.join('');
+     var arr = [];
+     arr = arr.concat(array);
+     arr.sort(function(a,b){return a-b});
+     arr = arr.join('');
+     array = array.join('');
+     if(arr === array){
+        return 'yes, ascending';
+     } else if(arr1 === array){
+            return 'yes, descending';
+       } else{return 'no'}
+   
+}
