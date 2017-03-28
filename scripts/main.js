@@ -455,12 +455,18 @@ function solution(str){
 
 // my example below doesnt account for multiple elements of the same value 
 
+// function removeSmallest(numbers) {
+//   var myMin = Math.min.apply(null, numbers);
+//   console.log(numbers.filter((e) => {return e != myMin}));
+//   // throw "TODO: removeSmallest";
+// }
+// var whatEva = [2,1,4,7,9,11,12];
+// console.log(removeSmallest(whatEva));
+
+// More clever example from "best practices" solution
 function removeSmallest(numbers) {
-  var myMin = Math.min.apply(null, numbers);
-  console.log(numbers.filter((e) => {return e != myMin}));
-  // throw "TODO: removeSmallest";
+  if(!numbers)return [];
+  var min=Math.min.apply(null,numbers);
+  numbers.splice(numbers.indexOf(min),1);
+  return numbers;
 }
-var whatEva = [2,1,4,7,9,11,12];
-console.log(removeSmallest(whatEva));
-
-
