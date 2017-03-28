@@ -438,3 +438,9 @@ function isSortedAndHow(array) {
        } else{return 'no'}
    
 }
+// Complete the solution so that it reverses the string value passed into it.
+function solution(str){
+  var revString = str.split("").reverse().join("");
+  return revString
+}
+
