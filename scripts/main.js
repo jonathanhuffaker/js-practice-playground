@@ -438,9 +438,29 @@ function isSortedAndHow(array) {
        } else{return 'no'}
    
 }
+
+// ==================
 // Complete the solution so that it reverses the string value passed into it.
 function solution(str){
   var revString = str.split("").reverse().join("");
   return revString
 }
+// ===============
+
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. 
+// If there are multiple elements with the same value, remove the one with a lower index. 
+// If you get an empty array/list, return an empty array/list.
+
+// Don't change the order of the elements that are left.
+
+// my example below doesnt account for multiple elements of the same value 
+
+function removeSmallest(numbers) {
+  var myMin = Math.min.apply(null, numbers);
+  console.log(numbers.filter((e) => {return e != myMin}));
+  // throw "TODO: removeSmallest";
+}
+var whatEva = [2,1,4,7,9,11,12];
+console.log(removeSmallest(whatEva));
+
 
